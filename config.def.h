@@ -84,7 +84,7 @@ static const struct KFV open_map[] = {
     {".zip"  , 0    , "atool --list --"  } ,
     {".rar"  , 0    , "unrar -lt -p- --" } ,
     {".7z"   , 0    , "7z l -p- --"      } ,
-    {".log"  , 0    , "tail -f"          } ,
+    {".log"  , 0    , "tail -f -n 200"   } ,
     {".json" , 0    , "open -a /Applications/Sublime\\ Text.app"              }
 };
 
