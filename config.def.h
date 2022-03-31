@@ -86,17 +86,17 @@ static const struct KFV open_map[] = {
     {".7z"   , 0    , "7z l -p- --"      } ,
     {".log"  , 0    , "tail -f -n 200"   } ,
     {".out"  , 0    , "tail -f -n 200"   } ,
-    {".json" , 0    , "open -a /Applications/Sublime\\ Text.app"              }
+    {".json" , 0    , "vim"              }
 };
 
 /* open rules for rest */
 static const struct KFV open_else_map[] = {
     /*mine     , &    , application                */
-    {"image/*" , 1    , "open -a /Applications/Adobe\\ Photoshop\\ CC\\ 2019/Adobe\\ Photoshop\\ CC\\ 2019.app"                     } , // open -a /Applications/Adobe\\ Photoshop\\ CC\\ 2019/Adobe\\ Photoshop\\ CC\\ 2019.app , feh   , img2txt --gamma=0.5 , ..
+    {"image/*" , 1    , "sxiv"                     } , // sxiv , feh   , img2txt --gamma=0.5 , ..
     {"video/*" , 1    , "mpv --geometry=100%x100%" } , // mpv  , vlc   , ...
     {"audio/*" , 0    , "mpv"                      } , // mpv  , vlc   , ...
-    {"text/*"  , 0    , "open -a /Applications/Sublime\\ Text.app"                      } , // open -a /Applications/Sublime\\ Text.app  , emacs ,
-    {"inode/*" , 0    , "open -a /Applications/Sublime\\ Text.app"                      }   // open -a /Applications/Sublime\\ Text.app  , emacs , // inode/x-empty
+    {"text/*"  , 0    , "vim"                      } , // vim  , emacs ,
+    {"inode/*" , 0    , "vim"                      }   // vim  , emacs , // inode/x-empty
 };
 
 /* exec rules */
