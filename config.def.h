@@ -85,6 +85,7 @@ static const struct KFV open_map[] = {
     {".rar"  , 0    , "unrar -lt -p- --" } ,
     {".7z"   , 0    , "7z l -p- --"      } ,
     {".log"  , 0    , "tail -f -n 200"   } ,
+    {".out"  , 0    , "tail -f -n 200"   } ,
     {".json" , 0    , "open -a /Applications/Sublime\\ Text.app"              }
 };
 
@@ -115,6 +116,8 @@ static const struct KV exec_map[] = {
     {".lua"  , "filename=%s; lua ${filename}"                                                                                                         },
     {".js"   , "filename=%s; node ${filename}"                                                                                                        },
     {".ts"   , "filename=%s; tsc ${filename}"                                                                                                         },
+    {".log"   , "filename=%s; vim ${filename}"                                                                                                        },
+    {".out"   , "filename=%s; vim ${filename}"                                                                                                        },
     {".sql"  , "filename=%s; mysql -uroot -p < ${filename}"                                                                                           }
 };
 
