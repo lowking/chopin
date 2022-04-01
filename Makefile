@@ -22,7 +22,7 @@ config.h:
 	cp -f config.def.h $@
 
 chopin: ${OBJ}
-	${CC} -o $@ ${OBJ} ${LDFLAGS} -std=c99 or -std=gnu99
+	${CC} -o $@ ${OBJ} ${LDFLAGS}
 
 clean:
 	rm -rf chopin ${OBJ} chopin-${VERSION} chopin-${VERSION}.tar.gz

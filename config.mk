@@ -9,7 +9,7 @@ MANPREFIX = ${PREFIX}/share/man
 # includes and libs
 
 # flags
-CFLAGS = -Wall
+CFLAGS = -Wall -std=c99
 
 # compiler and linker
 CC = cc
