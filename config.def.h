@@ -116,8 +116,8 @@ static const struct KV exec_map[] = {
     {".lua"  , "filename=%s; lua ${filename}"                                                                                                         },
     {".js"   , "filename=%s; node ${filename}"                                                                                                        },
     {".ts"   , "filename=%s; tsc ${filename}"                                                                                                         },
-    {".log"   , "filename=%s; vim ${filename}"                                                                                                        },
-    {".out"   , "filename=%s; vim ${filename}"                                                                                                        },
+    {".log"   , "filename=%s; open -a /Applications/Sublime\\ Text.app ${filename}"                                                                                                        },
+    {".out"   , "filename=%s; open -a /Applications/Sublime\\ Text.app ${filename}"                                                                                                        },
     {".sql"  , "filename=%s; mysql -uroot -p < ${filename}"                                                                                           }
 };
 
