@@ -86,6 +86,7 @@ static const struct KFV open_map[] = {
     {".7z"   , 0    , "7z l -p- --"      } ,
     {".log"  , 0    , "tail -f -n 200"   } ,
     {".out"  , 0    , "tail -f -n 200"   } ,
+    {".list" , 0    , "vim"              } ,
     {".json" , 0    , "vim"              }
 };
 
