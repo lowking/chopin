@@ -103,7 +103,7 @@ static const struct KFV open_else_map[] = {
 static const struct KV exec_map[] = {
     /*.ext   , shell scripts                                                                                                                          */
     {".sh"   , "filename=%s; sh ${filename}"                                                                                                          },
-    {".py"   , "filename=%s; python ${filename}"                                                                                                      },
+    {".py"   , "filename=%s; python3 ${filename}"                                                                                                      },
     {".jl"   , "filename=%s; julia ${filename}"                                                                                                       },
     {".tex"  , "filename=%s; xelatex -interaction nonstopmode ${filename}; bibtex *.aux; xelatex -interaction nonstopmode ${filename}; zathura *.pdf" },
     {".c"    , "filename=%s; cd ${filename%.*}; sh build.sh"                                                                                          },
