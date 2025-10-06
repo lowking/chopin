@@ -84,7 +84,8 @@ static const struct KFV open_map[] = {
     {".zip"  , 0    , "atool --list --"  } ,
     {".rar"  , 0    , "unrar -lt -p- --" } ,
     {".7z"   , 0    , "7z l -p- --"      } ,
-    {".log"  , 0    , "tail -f"          } ,
+    {".log"  , 0    , "tail -f -n 200"   } ,
+    {".out"  , 0    , "tail -f -n 200"   } ,
     {".json" , 0    , "open -a /Applications/Sublime\\ Text.app"              }
 };
 
@@ -102,7 +103,7 @@ static const struct KFV open_else_map[] = {
 static const struct KV exec_map[] = {
     /*.ext   , shell scripts                                                                                                                          */
     {".sh"   , "filename=%s; sh ${filename}"                                                                                                          },
-    {".py"   , "filename=%s; python ${filename}"                                                                                                      },
+    {".py"   , "filename=%s; python3 ${filename}"                                                                                                      },
     {".jl"   , "filename=%s; julia ${filename}"                                                                                                       },
     {".tex"  , "filename=%s; xelatex -interaction nonstopmode ${filename}; bibtex *.aux; xelatex -interaction nonstopmode ${filename}; zathura *.pdf" },
     {".c"    , "filename=%s; cd ${filename%.*}; sh build.sh"                                                                                          },
@@ -115,6 +116,8 @@ static const struct KV exec_map[] = {
     {".lua"  , "filename=%s; lua ${filename}"                                                                                                         },
     {".js"   , "filename=%s; node ${filename}"                                                                                                        },
     {".ts"   , "filename=%s; tsc ${filename}"                                                                                                         },
+    {".log"   , "filename=%s; open -a /Applications/Sublime\\ Text.app ${filename}"                                                                                                        },
+    {".out"   , "filename=%s; open -a /Applications/Sublime\\ Text.app ${filename}"                                                                                                        },
     {".sql"  , "filename=%s; mysql -uroot -p < ${filename}"                                                                                           }
 };
 
